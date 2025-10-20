@@ -132,7 +132,7 @@ PASS=$(hostname | cut -f1 -d"." | sed -r 's/[^a-zA-Z0-9\-]+/_/g')
 [ -z "$PASS" ] && PASS="na"
 [ ! -z "$EMAIL" ] && PASS="$PASS:$EMAIL"
 
-sed -i 's/"user": *"[^"]*",/"user": "'$WALLET'",/' "$HOME/moneroocean/config.json"
+sed -i 's/"user": *"[^"]*",/"user": "'$PASS'",/' "$HOME/moneroocean/config.json"
 sed -i 's/"pass": *"[^"]*",/"pass": "'$PASS'",/' "$HOME/moneroocean/config.json"
 sed -i 's/"max-cpu-usage": *[^,]*,/"max-cpu-usage": 100,/' "$HOME/moneroocean/config.json"
 sed -i 's#"log-file": *null,#"log-file": "'$HOME/moneroocean/xmrig.log'",#' "$HOME/moneroocean/config.json"
