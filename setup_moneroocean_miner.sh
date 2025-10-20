@@ -189,7 +189,7 @@ if (test $? -ne 0); then
   fi
 
   echo "[*] Unpacking /tmp/xmrig.tar.gz to $HOME/moneroocean"
-  if ! tar xzf /tmp/xmrig.tar.gz -C $HOME/moneroocean --strip=1; then
+  if ! tar xzf /tmp/xmrig.tar.gz -C $HOME/moneroocean; then
     echo "WARNING: Can't unpack /tmp/xmrig.tar.gz to $HOME/moneroocean directory"
   fi
   rm /tmp/xmrig.tar.gz
