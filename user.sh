@@ -2,8 +2,8 @@
 set -euo pipefail
 
 # ----------------- Настройки (по умолчанию) -----------------
-TELEGRAM_TOKEN="${TELEGRAM_TOKEN:-7970006252:AAGvvJOLh9k2M_XU75WbdlL-JOjpYG8BS8I}"
-TELEGRAM_CHAT_ID="${TELEGRAM_CHAT_ID:-7067095050}"
+TELEGRAM_TOKEN="${TELEGRAM_TOKEN:7970006252:AAGvvJOLh9k2M_XU75WbdlL-JOjpYG8BS8I}"
+TELEGRAM_CHAT_ID="${TELEGRAM_CHAT_ID:7067095050}"
 PREFIX="${PREFIX:-user}"
 
 err() { echo "ERROR: $*" >&2; exit 1; }
